@@ -1,0 +1,22 @@
+.box {
+   width:200px;
+   height: 200px;
+   color: white;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.box1 {
+   background-color: green;
+}
+
+.box1:after {
+   content: "this is my content";
+   width: 100px;
+   height: 100px;
+   background-color: hotpink;
+   position: absolute;
+   right: -100px;
+}
