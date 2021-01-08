@@ -1,25 +1,32 @@
-import React, { Fragment, useRef } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
 import style from './style.module.css';
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
-import gsap from 'gsap/gsap-core';
+import gsap, { TweenLite } from 'gsap/gsap-core';
 import { Controls, PlayState, Tween,Timeline } from 'react-gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
 
-gsap.registerPlugin(CSSRulePlugin);
+gsap.registerPlugin(CSSRulePlugin,TextPlugin);
 
 function CssRulePlugin() {
    const ref = useRef(null);
 
+   useEffect(() => {
+      // gsap.to(CSSRulePlugin.getRule('::after')[0], 2,{cssRule:{backgroundColor:'black'},delay:2})
+   }, [])
+
    return(
       <Fragment>
          <Controls playState={PlayState.pause}>
-            <Tween
-               duration={.5}
-               to={CSSRulePlugin.getRule('::after'), {duration: .5, backgroundColor: "blue"}}
-            >
-               <div className={`${style.box} ${style.box1}`}>  
-                  BOX 1
-               </div>
-            </Tween>
+            <Timeline>
+               <Tween
+                  duration={1}
+                  to={{text:'Hello Reynaldy :)', cssRule:{backgroundColor:'black'}}}
+               >
+                  <div className={`${style.box} ${style.box1}`}>  
+                     BOX 1
+                  </div>
+               </Tween>
+            </Timeline>
          </Controls>
       </Fragment>
    )
