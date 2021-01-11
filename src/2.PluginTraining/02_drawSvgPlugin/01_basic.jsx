@@ -28,7 +28,7 @@ function BasicSvg() {
             <Controls playState={PlayState.pause}>
                <svg width="297" height="85" viewBox="0 0 297 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 81C23.4327 55.2049 30.428 16.1976 66 5C92.9437 -3.48152 138.071 8.93429 156 41C197.6 115.4 260.667 72 295 41"  stroke="#AEAEAE" strokeWidth="4"/>
-                     <Timeline target={<path d="M2 81C23.4327 55.2049 30.428 16.1976 66 5C92.9437 -3.48152 138.071 8.93429 156 41C197.6 115.4 260.667 72 295 41" stroke="#14ff1b" strokeWidth="4"/>}>
+                     <Timeline target={<path d="M2 81C23.4327 55.2049 30.428 16.1976 66 5C92.9437 -3.48152 138.071 8.93429 156 41C197.6 115.4 260.667 72 295 41" stroke="#14ff1b" strokeWidth="4" strokeLinecap='round' />}>
                         <Tween
                            from={{svgDraw: [0.2,0.7]}}
                            to={{svgDraw: [0.1,0.4]}}
@@ -55,6 +55,63 @@ function BasicSvg() {
             </Controls>
          </div>
 
+         <div style={{width:'100%',height:'50vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
+            <Controls playState={PlayState.pause}>
+               <svg height="511pt" viewBox="0 -10 511.98685 511" width="511pt" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'200px'}}>
+                  <Timeline
+                     target={(
+                           <path d="m510.652344 185.902344c-3.351563-10.367188-12.546875-17.730469-23.425782-18.710938l-147.773437-13.417968-58.433594-136.769532c-4.308593-10.023437-14.121093-16.511718-25.023437-16.511718s-20.714844 6.488281-25.023438 16.535156l-58.433594 136.746094-147.796874 13.417968c-10.859376 1.003906-20.03125 8.34375-23.402344 18.710938-3.371094 10.367187-.257813 21.738281 7.957031 28.90625l111.699219 97.960937-32.9375 145.089844c-2.410156 10.667969 1.730468 21.695313 10.582031 28.09375 4.757813 3.4375 10.324219 5.1875 15.9375 5.1875 4.839844 0 9.640625-1.304687 13.949219-3.882813l127.46875-76.183593 127.421875 76.183593c9.324219 5.609376 21.078125 5.097657 29.910156-1.304687 8.855469-6.417969 12.992187-17.449219 10.582031-28.09375l-32.9375-145.089844 111.699219-97.941406c8.214844-7.1875 11.351563-18.539063 7.980469-28.925781zm0 0" stroke='#ffc107' strokeWidth='3' fill='none' markerMid='url(#dot)'/>
+                     )}
+                     duration={5}
+                  >
+                     <Tween
+                        from={{svgDraw: 1}}
+                        to={{svgDraw:0}}
+                     />
+                     <Tween
+                        to={{svgDraw: [1,0]}}
+                     />
+                     <Tween to={{fill:'#ffc107',markerMid:"url(#dot)"}}/>
+                  </Timeline>
+               </svg>
+            </Controls>
+         </div>
+
+         <div style={{width:'100%',height:'50vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
+            <Controls playState={PlayState.pause}>
+               <svg width="682" height="400" viewBox="0 0 682 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <marker id="dot" viewBox="0 0 20 23" refX="12" refY="10" width='500' height='500'>
+                     <path id="svg_2" fill="#e74c3c" d="m12,0c-4.4183,0 -8,3.5817 -8,8c0,1.421 0.3816,2.75 1.0312,3.906c0.1079,0.192 0.221,0.381 0.3438,0.563l6.625,11.531l6.625,-11.531c0.102,-0.151 0.19,-0.311 0.281,-0.469l0.063,-0.094c0.649,-1.156 1.031,-2.485 1.031,-3.906c0,-4.4183 -3.582,-8 -8,-8zm0,4c2.209,0 4,1.7909 4,4c0,2.209 -1.791,4 -4,4c-2.2091,0 -4,-1.791 -4,-4c0,-2.2091 1.7909,-4 4,-4z"/>
+                     <path id="svg_3" fill="#c0392b" d="m12,3c-2.7614,0 -5,2.2386 -5,5c0,2.761 2.2386,5 5,5c2.761,0 5,-2.239 5,-5c0,-2.7614 -2.239,-5 -5,-5zm0,2c1.657,0 3,1.3431 3,3s-1.343,3 -3,3s-3,-1.3431 -3,-3s1.343,-3 3,-3z" />            
+                  </marker>
+                  <path d="M1 139L201 2L354 139L528 2L681 139" stroke="#AEAEAE" strokeWidth="5"/>
+                     <Tween
+                        from={{svgDraw: 0}}
+                        to={{svgDraw:1, markerStart:'url(#dot)', markerMid:'url(#dot)', markerEnd:'url(#dot)'}}
+                        duration={2}
+                        stagger={{yoyo:true,repeat:-1}}
+                     >
+                        <path d="M1 139L201 2L354 139L528 2L681 139" id='svg1' stroke="rgb(0, 70, 223)" strokeWidth="5" />
+                     </Tween>
+               </svg>
+            </Controls>
+         </div>
+
+         <div style={{width:'100%',height:'50vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
+            <Controls playState={PlayState.pause}>
+               <svg width="297" height="85" viewBox="0 0 297 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 81C23.4327 55.2049 30.428 16.1976 66 5C92.9437 -3.48152 138.071 8.93429 156 41C197.6 115.4 260.667 72 295 41"  stroke="#AEAEAE" strokeWidth="4"/>
+                     <Timeline target={<path d="M2 81C23.4327 55.2049 30.428 16.1976 66 5C92.9437 -3.48152 138.071 8.93429 156 41C197.6 115.4 260.667 72 295 41" stroke="#14ff1b" strokeWidth="4" />}>
+                        <Tween
+                           from={{strokeDasharray: [100]}}
+                           to={{strokeDasharray:0}}
+                           duration={1}
+                           stagger={{repeat:-1, yoyo : true}}
+                        />
+                     </Timeline>
+               </svg>
+            </Controls>
+         </div>
       </Fragment>
    )
 }
