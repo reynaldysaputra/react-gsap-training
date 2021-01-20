@@ -15,10 +15,11 @@ import TrainingPin2 from './3_ScrollMagic+GSAP/01_pin/training2';
 import TrainingPin3 from './3_ScrollMagic+GSAP/01_pin/training3';
 import AppsTween1 from './3_ScrollMagic+GSAP/02_tween/apps';
 import TweenTextAnimation from './3_ScrollMagic+GSAP/03_tweenText/apps';
+import Parallax from './3_ScrollMagic+GSAP/04_parallax/apps';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TweenTextAnimation/>
+    <Parallax/>
   </React.StrictMode>,
   document.getElementById('root')
 );
