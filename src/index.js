@@ -9,11 +9,12 @@ import CssRulePlugin from './2.PluginTraining/01_cssRulePlugin/apps';
 import BasicSvg from './2.PluginTraining/02_drawSvgPlugin/01_basic';
 import Coba from './2.PluginTraining/03_Flip/a';
 import AppsFlip from './2.PluginTraining/03_Flip/apps';
-import AppsScrollMagic1 from './3_ScrollMagic+GSAP/01_basic/apps';
+import AppsScrollMagic1 from './3_ScrollMagic+GSAP/01_pin/apps';
+import TrainingPin1 from './3_ScrollMagic+GSAP/01_pin/training1';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppsScrollMagic1/>
+    <TrainingPin1/>
   </React.StrictMode>,
   document.getElementById('root')
 );

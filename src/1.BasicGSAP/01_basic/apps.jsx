@@ -11,7 +11,6 @@ function Basic() {
                <Scene triggerElement='#main1' duration={500}  offset={80} triggerHook={0} indicators={true}>
                   {(progress) => (
                      <>
-                              {console.log(progress)}
                         <Tween
                            to={{
                               x : 1000
