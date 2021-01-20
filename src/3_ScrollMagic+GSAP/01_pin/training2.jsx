@@ -4,29 +4,29 @@ import { Controller, Scene } from 'react-scrollmagic';
 function TrainingPin2() {
    return(
       <Fragment>
-         <div style={{width:'100%',height:'500vh',overflow:'hidden'}}>
-            <Controller globalSceneOptions={{ triggerHook : '0' }}> 
-               <Scene pin>
+         <div style={{width:'100%',height:'500vh',overflow:'hidden'}} id='container'>
+            <Controller globalSceneOptions={{ triggerHook : '0'}}> 
+               <Scene  pin indicators={true}>
                   <div style={{width:'100%',height:'100vh',background:'#532e2e',display:'flex',justifyContent:'center',alignItems:'center',zIndex:-1}}>
                      <h1 style={{color:"white"}}>Hello word 1</h1>
                   </div>
                </Scene>
-               <Scene pin>
+               <Scene pin indicators={true}>
                   <div style={{width:'100%',height:'100vh',background:'#3ba38d',display:'flex',justifyContent:'center',alignItems:'center',zIndex:-1}}>
                      <h1 style={{color:"white"}}>Hello word 2</h1>
                   </div>
                </Scene>
-               <Scene pin>
+               <Scene pin indicators={true}>
                   <div style={{width:'100%',height:'100vh',background:'#2f6191',display:'flex',justifyContent:'center',alignItems:'center',zIndex:-1}}>
                      <h1 style={{color:"white"}}>Hello word 3</h1>
                   </div>
                </Scene>
-               <Scene pin>
+               <Scene pin indicators={true}>
                   <div style={{width:'100%',height:'100vh',background:'#91551e',display:'flex',justifyContent:'center',alignItems:'center',zIndex:-1}}>
                      <h1 style={{color:"white"}}>Hello word 4</h1>
                   </div>
                </Scene>
-               <Scene pin>
+               <Scene pin indicators={true}>
                   <div style={{width:'100%',height:'100vh',background:'black',display:'flex',justifyContent:'center',alignItems:'center',zIndex:-1}}>
                      <h1 style={{color:"white"}}>Hello word 5</h1>
                   </div>
