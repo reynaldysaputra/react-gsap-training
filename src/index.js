@@ -13,10 +13,12 @@ import AppsScrollMagic1 from './3_ScrollMagic+GSAP/01_pin/apps';
 import TrainingPin1 from './3_ScrollMagic+GSAP/01_pin/training1';
 import TrainingPin2 from './3_ScrollMagic+GSAP/01_pin/training2';
 import TrainingPin3 from './3_ScrollMagic+GSAP/01_pin/training3';
+import AppsTween1 from './3_ScrollMagic+GSAP/02_tween/apps';
+import TweenTextAnimation from './3_ScrollMagic+GSAP/03_tweenText/apps';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TrainingPin1/>
+    <TweenTextAnimation/>
   </React.StrictMode>,
   document.getElementById('root')
 );
