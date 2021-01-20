@@ -58,7 +58,7 @@ function Timelines(){
          <Controls playState={PlayState.pause}>
             <Timeline target={<ThreeText/>}>
                <Tween from={{x:'-30vw', opacity:0}} to={{x:'30vw',opacity:1}} target='text1' position='0' />
-               <Tween from={{ x: '-100vw' }} to={{x:'30vw'}} target="text2" position="1" stagger={0.1}  />
+               <Tween from={{ x: '-100vw' }} to={{x:'30vw'}} target="text2" position="1" stagger={.1}  />
             </Timeline>
          </Controls>
 

@@ -42,3 +42,22 @@
    width: 100%;
    display: flex;
 }
+
+.z {
+   background-color: red !important;
+   transform: scale(2);
+   transition: .5s;
+   margin-top: 100px;
+   margin-bottom: 100px;
+}
+
+.x {
+   transform: scale(2);
+   background-color: green;
+   transition: .5s;
+   width:100px;
+   height:100px;
+   color:white;
+   background:green;
+   margin-top: 30px;
+}

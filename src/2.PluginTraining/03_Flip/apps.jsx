@@ -10,6 +10,7 @@ function AppsFlip() {
    const [isFullScreen1, setScreen1] = useState(false);
    const [isFullScreen2, setScreen2] = useState(false);
    const [numbRandom, setNumbRandom] = useState([1,2,3,4,5,6,7,8,9]);
+   const [focus, setFocus] = useState(null);
    const handleRandom = () => {
       let result;
       for (let index = 0; index < numbRandom.length - 1; index++) {
@@ -38,7 +39,9 @@ function AppsFlip() {
          </Controls>
 
          <h3>One Div</h3>
-         <Flipper flipKey={isFullScreen1}>
+         <Flipper flipKey={isFullScreen1} staggerConfig={{default:{
+            reverse : true,speed:.1
+         },namedStagger:{speed :.1}}}>
             <Flipped flipId='1'>
                <div className={isFullScreen1 ? style.fullscreen : style.box} onClick={() => setScreen1(!isFullScreen1)}>
 
@@ -61,12 +64,26 @@ function AppsFlip() {
 
          <h3>Random Password 1-9</h3>
          <button onClick={handleRandom}>Generate</button>
-         <Flipper flipKey={Math.random()} className={style.container2}>
+         <Flipper flipKey={Math.random()} className={style.container2} staggerConfig={{default:{reverse:true}}}>
             {numbRandom.map((item,i) => (
                <Flipped flipId={item} key={i}>
                   <h3>{item}</h3>
                </Flipped>
             ))}
+         </Flipper>
+
+         <Flipper flipKey='coba' decisionData={focus}>
+            {[1,2,3,4,5,6].map(item => ((
+               <Flipped key={item} shouldFlip={focus === item} flipId={`animation`}>
+                  <div 
+                     onClick={() => setFocus(item)}
+                     className={focus === item ? style.z : style.x}
+                     >
+                        {item}
+                        {console.log(focus === item)}
+                  </div>
+               </Flipped>
+            )))}
          </Flipper>
       </Fragment>
    )

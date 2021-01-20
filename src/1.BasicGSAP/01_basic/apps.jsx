@@ -8,13 +8,13 @@ function Basic() {
       <Fragment>
          <main className={style.main} id='main1'>
             <Controller>
-               <Scene triggerElement='#main1' duration={100}  offset={80} triggerHook={0} indicators={true}>
+               <Scene triggerElement='#main1' duration={500}  offset={80} triggerHook={0} indicators={true}>
                   {(progress) => (
                      <>
                               {console.log(progress)}
                         <Tween
                            to={{
-                              x : 300
+                              x : 1000
                            }}
                            totalProgress={progress}
                            paused
