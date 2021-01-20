@@ -11,10 +11,11 @@ import Coba from './2.PluginTraining/03_Flip/a';
 import AppsFlip from './2.PluginTraining/03_Flip/apps';
 import AppsScrollMagic1 from './3_ScrollMagic+GSAP/01_pin/apps';
 import TrainingPin1 from './3_ScrollMagic+GSAP/01_pin/training1';
+import TrainingPin2 from './3_ScrollMagic+GSAP/01_pin/training2';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TrainingPin1/>
+    <TrainingPin2/>
   </React.StrictMode>,
   document.getElementById('root')
 );
